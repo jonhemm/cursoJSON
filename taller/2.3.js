@@ -4,8 +4,16 @@ const edad = () => 18;
 const maltrecho = {
     esValido: false,
     calcular: edad(),
-    fecha: (new Date()).toJSON()
+    fecha: (new Date()).toJSON(),
+    toJSON: function () {
+        return {
+            consulta: `Es${this.esValido ? '' : ' no'} válido y tiene ${this.calcular} años`
+        }
+    }
 }
-//TODO: Convertir a Texto
+console.log(maltrecho);
 
+//TODO: Convertir a Texto
+//const texto = JSON.stringify(maltrecho, ['calcular', 'fecha'], 8);
+const texto = JSON.stringify(maltrecho);
 console.log(texto);

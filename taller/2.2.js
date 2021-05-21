@@ -5,5 +5,10 @@ const texto = '{"raza":"Británico","nombre":"Felix"}';
 console.log("Texto:");
 console.log(texto);
 
+const gato = JSON.parse(texto);  //actividad
+
 console.log("Objeto:");
+console.log(gato);
+
+gato.nombre = "Garfield";       //mutable
 console.log(gato);
